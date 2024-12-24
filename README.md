@@ -56,4 +56,4 @@ A modern lifestyle blog built with Node.js, Express.js, and EJS templating engin
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/your-username/lifestyle-blog.git
+git clone https://github.com/dannytist73/blog-template.git
