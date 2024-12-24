@@ -1,0 +1,47 @@
+<!-- views/home.ejs -->
+<%- include('partials/header', {title: 'April Wayne - Lifestyle Blog',
+currentPage: 'home'}) %>
+
+<!-- Hero Video -->
+<div class="hero-video-container">
+  <video autoplay muted loop playsinline class="hero-video">
+    <source src="/videos/bg-serenity.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+<!-- Main Content -->
+<main class="main-content">
+  <div class="content-container">
+    <!-- Flex Container for About and Subscribe -->
+    <div class="flex-container">
+      <!-- About Section -->
+      <section class="about-section">
+        <div class="about-image">
+          <img src="/images/profile.jpg" alt="April Wayne" />
+        </div>
+        <div class="about-content">
+          <h2>ABOUT ME</h2>
+          <p>
+            Hello! I'm a foodie, an introvert, and a virtual assistant who loves
+            sharing my life with my family and my beloved dogs, whom I call
+            "babis." Join me on this blog as I share my favorite recipes, personal
+            experiences, and the little things that make life special.
+          </p>
+          <a href="/about" class="read-more">Read More<span class="arrow">→</span></a>
+        </div>
+      </section>
+
+      <!-- Subscribe Section -->
+      <section class="subscribe-section">
+        <h2>Join My Mailing List</h2>
+        <form class="subscribe-form">
+          <input type="email" placeholder="Email" required />
+          <button type="submit" class="subscribe-btn">SUBSCRIBE</button>
+        </form>
+      </section>
+    </div>
+  </div>
+</main>
+
+<%- include('partials/footer') %>

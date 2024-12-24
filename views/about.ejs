@@ -1,0 +1,68 @@
+<!-- views/about.ejs -->
+<%- include('partials/header', {title: 'About - April Wayne Blog', currentPage:
+'about'}) %>
+
+<main class="main-content">
+  <div class="content-container">
+    <section class="about-full">
+      <div class="about-content-extended">
+        <h1>About Me</h1>
+
+        <div class="about-text">
+          <p>
+            Hello! I'm April Wayne, a passionate foodie, dedicated virtual
+            assistant, and lifestyle blogger based in the beautiful Pacific
+            Northwest. When I'm not helping clients streamline their businesses,
+            you'll find me experimenting in my kitchen, exploring local trails
+            with my beloved dogs (whom I affectionately call "babis"), or
+            documenting life's precious moments through my lens.
+          </p>
+
+          <p>
+            My journey into blogging began as a way to share my culinary
+            adventures and travel experiences, but it quickly evolved into
+            something more meaningful - a platform where I could connect with
+            like-minded individuals who share my passion for living life
+            authentically and finding joy in the simple moments.
+          </p>
+
+          <p>
+            As an introvert at heart, I find peace in quiet mornings with a cup
+            of coffee, long walks in nature, and the therapeutic process of
+            recipe development. Through this blog, I hope to inspire others to
+            embrace their authentic selves and find beauty in everyday moments.
+          </p>
+
+          <h2>What You'll Find Here</h2>
+          <ul>
+            <li>Simple yet delicious recipes that bring comfort and joy</li>
+            <li>Travel guides and hidden gems from my adventures</li>
+            <li>Lifestyle tips for finding balance in the digital age</li>
+            <li>Stories about life with my furry companions</li>
+            <li>Personal growth insights and productivity tips</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="gallery-section">
+        <h2>Snapshots of My Life</h2>
+        <div class="gallery-grid">
+          <% aboutImages.forEach(function(image) { %>
+          <div class="gallery-item">
+            <img
+              src="<%= image.url %>"
+              alt="<%= image.description %>"
+              class="gallery-image"
+            />
+            <div class="gallery-overlay">
+              <p class="gallery-description"><%= image.description %></p>
+            </div>
+          </div>
+          <% }); %>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<%- include('partials/footer') %>

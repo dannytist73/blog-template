@@ -1,0 +1,33 @@
+<!-- views/eat.ejs -->
+<%- include('partials/header', {title: 'Eat - April Wayne Blog', currentPage:
+'eat'}) %>
+
+<main class="main-content">
+  <div class="content-container">
+    <section class="eat-section">
+      <h1>Culinary Adventures</h1>
+
+      <div class="food-gallery-section">
+        <p class="intro-text">
+          A collection of my latest culinary creations and food adventures
+        </p>
+        <div class="gallery-grid">
+          <% foodImages.forEach(function(image) { %>
+          <div class="gallery-item">
+            <img
+              src="<%= image.url %>"
+              alt="<%= image.description %>"
+              class="gallery-image"
+            />
+            <div class="gallery-overlay">
+              <p class="gallery-description"><%= image.description %></p>
+            </div>
+          </div>
+          <% }); %>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<%- include('partials/footer') %>

@@ -1,0 +1,587 @@
+/* public/styles/main.css */
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", serif;
+  background-color: #fbd1db;
+  color: #444444;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Navigation */
+.navbar {
+  padding: 35px 0;
+  background-color: #fbd1db;
+  position: relative;
+  border-bottom: 1px solid rgba(68, 68, 68, 0.3);
+  margin-bottom: 15px;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 40px;
+  position: relative;
+}
+
+.home-icon {
+  font-size: 20px;
+  color: #444444;
+  text-decoration: none;
+  position: absolute;
+  left: 40px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 80px;
+}
+
+.nav-links a {
+  color: #444444;
+  text-decoration: none;
+  font-size: 15px;
+  letter-spacing: 2px;
+  transition: opacity 0.3s;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  opacity: 0.7;
+}
+
+/* Header */
+.site-header {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #fbd1db;
+}
+
+.site-title {
+  font-family: "Pinyon Script", serif;
+  font-size: 72px;
+  font-weight: 400;
+  line-height: 1;
+  font-style: normal;
+  border-bottom: none;
+}
+
+.site-subtitle {
+  font-size: 14px;
+  letter-spacing: 3px;
+  text-transform: lowercase;
+  margin-top: 10px;
+}
+
+/* Hero Video */
+.hero-video-container {
+  width: 80vw;
+  height: 400px;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  margin-bottom: 60px;
+  border-radius: 10px;
+}
+
+.hero-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Main Content */
+.content-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  position: relative;
+}
+
+.content-container::before {
+  display: none;
+}
+
+/* Flex container for About and Subscribe sections */
+.flex-container {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+/* About Section */
+.about-section {
+  flex: 2;
+  display: flex;
+  gap: 30px;
+  margin-bottom: 0;
+  align-items: flex-start;
+}
+
+.about-image {
+  flex: 0 0 200px;
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.about-content {
+  flex: 1;
+}
+
+.about-content h2 {
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.about-content p {
+  margin-bottom: 25px;
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+.read-more {
+  color: #444444;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.arrow {
+  transition: transform 0.3s;
+}
+
+.read-more:hover .arrow {
+  transform: translateX(10px);
+}
+
+/* Subscribe Section */
+.subscribe-section {
+  flex: 1;
+  text-align: center;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.subscribe-section h2 {
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.subscribe-form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.subscribe-form input {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: white;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+}
+
+.subscribe-btn {
+  background-color: #444444;
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Lato", sans-serif;
+  letter-spacing: 2px;
+  transition: background-color 0.3s;
+  font-size: 13px;
+}
+
+.subscribe-btn:hover {
+  background-color: #333333;
+}
+
+/* Footer */
+.site-footer {
+  margin-top: 60px;
+  padding: 40px 0;
+  border-top: 1px solid rgba(68, 68, 68, 0.1);
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  text-align: center;
+}
+
+.footer-social {
+  margin-bottom: 20px;
+}
+
+.footer-social a {
+  color: #444444;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 20px;
+  transition: opacity 0.3s;
+}
+
+.footer-social a:hover {
+  opacity: 0.7;
+}
+
+.footer-copyright {
+  font-size: 12px;
+  color: #666666;
+  letter-spacing: 1px;
+}
+
+/* Navigation Active State */
+.nav-links a.active {
+  font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-container {
+    padding: 0 20px;
+  }
+
+  .nav-links {
+    gap: 30px;
+  }
+
+  .site-title {
+    font-size: 48px;
+  }
+
+  .hero-video-container {
+    width: 90vw;
+    height: 300px;
+  }
+
+  .content-container {
+    padding: 0 20px;
+  }
+
+  .content-container::before {
+    left: 20px;
+    right: 20px;
+  }
+
+  .flex-container {
+    flex-direction: column;
+  }
+
+  .about-section {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .about-image {
+    max-width: 200px;
+    margin: 0 auto;
+  }
+
+  .subscribe-section {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-links {
+    gap: 15px;
+  }
+
+  .nav-links a {
+    font-size: 11px;
+  }
+
+  .site-title {
+    font-size: 36px;
+  }
+
+  .hero-video-container {
+    height: 200px;
+  }
+
+  .home-icon {
+    font-size: 18px;
+    left: 20px;
+  }
+
+  .footer-social a {
+    font-size: 18px;
+    margin: 0 10px;
+  }
+}
+
+/* Add these new mobile menu styles to your existing CSS */
+
+/* Mobile Menu Button */
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #444444;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+}
+
+/* Updated Navigation Styles */
+.nav-links {
+  display: flex;
+  gap: 80px;
+  transition: all 0.3s ease;
+}
+
+/* Responsive Design Updates */
+@media (max-width: 1024px) {
+  .nav-links {
+    gap: 40px;
+  }
+
+  .site-title {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Navigation changes */
+  .mobile-menu-btn {
+    display: block;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 250px;
+    background-color: #fbd1db;
+    flex-direction: column;
+    gap: 20px;
+    padding: 80px 20px;
+    z-index: 99;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .nav-links a {
+    font-size: 16px;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(68, 68, 68, 0.1);
+    width: 100%;
+    text-align: left;
+  }
+
+  /* Content adjustments */
+  .hero-video-container {
+    width: 90vw;
+    height: 250px;
+  }
+
+  .site-title {
+    font-size: 48px;
+  }
+
+  .site-subtitle {
+    font-size: 12px;
+  }
+
+  .about-content h2 {
+    font-size: 14px;
+  }
+
+  .about-content p {
+    font-size: 14px;
+  }
+
+  .subscribe-section h2 {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-title {
+    font-size: 36px;
+  }
+
+  .site-subtitle {
+    font-size: 11px;
+    letter-spacing: 2px;
+  }
+
+  .hero-video-container {
+    height: 200px;
+  }
+
+  .about-content p {
+    font-size: 13px;
+  }
+
+  .subscribe-form input,
+  .subscribe-btn {
+    font-size: 12px;
+    padding: 12px;
+  }
+
+  .footer-social a {
+    font-size: 18px;
+    margin: 0 10px;
+  }
+
+  .footer-copyright {
+    font-size: 11px;
+  }
+}
+
+/* Blog Actions Styles */
+.blog-actions {
+  max-width: 800px;
+  margin: 0 auto 40px;
+  text-align: right;
+}
+
+.create-post-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background-color: #444444;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.create-post-btn:hover {
+  background-color: #333333;
+  transform: translateY(-2px);
+}
+
+.create-post-btn i {
+  font-size: 16px;
+}
+
+/* Post Actions */
+.post-actions {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.blog-post {
+  position: relative;
+}
+
+.blog-post:hover .post-actions {
+  opacity: 1;
+}
+
+.action-btn {
+  background: none;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  color: #444444;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.edit-btn:hover {
+  color: #0066cc;
+  transform: scale(1.1);
+}
+
+.delete-btn:hover {
+  color: #dc3545;
+  transform: scale(1.1);
+}
+
+.delete-post-form {
+  margin: 0;
+  padding: 0;
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+  .blog-actions {
+    margin: 0 20px 30px;
+    text-align: center;
+  }
+
+  .post-actions {
+    position: static;
+    justify-content: flex-end;
+    opacity: 1;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 5px 5px 0 0;
+  }
+
+  .action-btn {
+    font-size: 14px;
+  }
+}
+
+/* Add overlay for mobile menu */
+.mobile-menu-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 98;
+}
+
+.mobile-menu-overlay.active {
+  display: block;
+}
+

@@ -1,0 +1,73 @@
+/* Simplified animations.css */
+
+/* Hover animations */
+.read-more,
+.subscribe-btn,
+.nav-links a,
+.social-links a {
+  transition: transform 0.3s ease;
+}
+
+.read-more:hover,
+.subscribe-btn:hover {
+  transform: translateY(-2px);
+}
+
+.nav-links a:hover,
+.social-links a:hover {
+  transform: scale(1.1);
+}
+
+/* Blog post hover effect */
+.blog-post {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 1; /* Ensure posts are always visible */
+}
+
+.blog-post:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile menu animations */
+@media (max-width: 768px) {
+  .nav-links {
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+  }
+
+  .nav-links.active {
+    transform: translateX(0);
+  }
+}
+
+/* Scroll reveal animations */
+.animate {
+  animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Ensure content is always visible */
+.hero-video-container,
+.about-image,
+.about-content,
+.blog-post,
+.subscribe-section,
+.nav-links a {
+  opacity: 1;
+}
+
+/* Remove page transition effects */
+.page-transition-overlay {
+  display: none;
+}

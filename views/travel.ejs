@@ -1,0 +1,49 @@
+<!-- views/travel.ejs -->
+<%- include('partials/header', {title: 'Travel - April Wayne Blog', currentPage:
+'travel'}) %>
+
+<main class="main-content">
+  <div class="content-container">
+    <section class="travel-section">
+      <h1>Travel Adventures</h1>
+
+      <div class="destination-section">
+        <h2>Pacific Northwest</h2>
+        <div class="gallery-grid">
+          <% pnwImages.forEach(function(image) { %>
+          <div class="gallery-item">
+            <img
+              src="<%= image.url %>"
+              alt="<%= image.description %>"
+              class="gallery-image"
+            />
+            <div class="gallery-overlay">
+              <p class="gallery-description"><%= image.description %></p>
+            </div>
+          </div>
+          <% }); %>
+        </div>
+      </div>
+
+      <div class="destination-section">
+        <h2>European Escapes</h2>
+        <div class="gallery-grid">
+          <% europeImages.forEach(function(image) { %>
+          <div class="gallery-item">
+            <img
+              src="<%= image.url %>"
+              alt="<%= image.description %>"
+              class="gallery-image"
+            />
+            <div class="gallery-overlay">
+              <p class="gallery-description"><%= image.description %></p>
+            </div>
+          </div>
+          <% }); %>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<%- include('partials/footer') %>

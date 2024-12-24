@@ -1,0 +1,72 @@
+<!-- views/partials/header.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      <%= typeof title !== 'undefined' ? title : 'April Wayne - Lifestyle Blog'
+      %>
+    </title>
+    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="stylesheet" href="/styles/blog.css" />
+    <link rel="stylesheet" href="/styles/animations.css" />
+    <link rel="stylesheet" href="/styles/forms.css" />
+    <link rel="stylesheet" href="/styles/pages.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Pinyon+Script&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <!-- Page Transition Overlay -->
+    <div class="page-transition-overlay"></div>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="/" class="home-icon"><i class="fas fa-home"></i></a>
+        <button class="mobile-menu-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="nav-links">
+          <a href="/blog" class="<%= currentPage === 'blog' ? 'active' : '' %>"
+            >BLOG</a
+          >
+          <a
+            href="/about"
+            class="<%= currentPage === 'about' ? 'active' : '' %>"
+            >ABOUT</a
+          >
+          <a
+            href="/travel"
+            class="<%= currentPage === 'travel' ? 'active' : '' %>"
+            >TRAVEL</a
+          >
+          <a href="/eat" class="<%= currentPage === 'eat' ? 'active' : '' %>"
+            >EAT</a
+          >
+          <a
+            href="/contact"
+            class="<%= currentPage === 'contact' ? 'active' : '' %>"
+            >CONTACT</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Site Header -->
+    <header class="site-header">
+      <h1 class="site-title">April Wayne</h1>
+      <p class="site-subtitle">lifestyle blog</p>
+    </header>
+  </body>
+</html>
