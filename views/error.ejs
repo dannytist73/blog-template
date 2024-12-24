@@ -1,0 +1,13 @@
+<%- include('partials/header', {title: 'Error', currentPage: ''}) %>
+
+<main class="main-content">
+  <div class="content-container">
+    <div class="error-container">
+      <h1>Oops!</h1>
+      <p><%= error %></p>
+      <a href="/" class="btn-primary">Go Home</a>
+    </div>
+  </div>
+</main>
+
+<%- include('partials/footer') %>

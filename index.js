@@ -1,6 +1,7 @@
 import express from "express";
 import bodyParser from "body-parser";
 import { fileURLToPath } from "url";
+import path from "path";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -13,6 +14,11 @@ app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
 app.use(bodyParser.urlencoded({ extended: true }));
+
+// Static files configuration
+app.use("/styles", express.static(path.join(__dirname, "public/styles")));
+app.use("/js", express.static(path.join(__dirname, "public/js")));
+app.use("/images", express.static(path.join(__dirname, "public/images")));
 
 let posts = {
   post1: {
@@ -295,5 +301,20 @@ function parseComments(commentsStr) {
     })
     .filter((comment) => comment.user && comment.comment);
 }
+
+// Error handling middleware
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).render("error", {
+    error: "Something broke! Please try again later.",
+  });
+});
+
+// 404 handler
+app.use((req, res, next) => {
+  res.status(404).render("error", {
+    error: "Page not found",
+  });
+});
 
 export default app;
